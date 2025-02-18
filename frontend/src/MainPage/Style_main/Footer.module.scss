@@ -1,0 +1,171 @@
+@import '../../Style/GlobalStyle.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500&display=swap');
+
+p {
+    margin: 0;
+}
+
+.foot_text {
+    position: relative;
+    top: -23px;
+    color: $red-color;
+    font-size: 40px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    -webkit-text-stroke: 0.8px black;
+    margin-bottom: 80px;
+}
+
+.text_contact {
+    color: $red-color;
+    font-size: 32px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+.group_footer {
+    // margin-top: 10px;
+    // margin-left: 100px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.group_text {
+    margin-top: 0px;
+    width: 278px;
+}
+
+.group_link {
+
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 10px 115px 10px;
+
+    svg {
+        cursor: pointer;
+    }
+
+    svg:hover {
+        fill: rgba(241, 209, 17, 1);
+        path{
+          fill:rgba(241, 209, 17, 1);
+        }
+    }
+}
+
+.container_footer{
+    margin: 0 100px 0 100px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+}
+
+
+@media (min-width: 420px) and (max-width: 880px) {
+    .container_footer{
+        margin: 0 50px 0 50px;
+    }
+    .group_logo{
+        img{
+            width: 50%;
+        }
+        .foot_text{
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+    .group_text{
+        width: 200px;
+        height: 125px;
+        .text_contact{
+            font-size: 24px;
+        }
+        .group_link{
+            svg{
+                width: 38px;
+                height: 38px;
+            }
+        }
+    }
+    .group_footer{
+        height: 350px;
+    }
+
+
+}
+@media (min-width: 420px) and (max-width: 520px) {
+    .container_footer{
+        margin: 0 5px 0 5px;
+    }
+    .group_logo{
+        img{
+            width: 40%;
+            // height: 25px;
+        }
+        .foot_text{
+            font-size: 20px;
+        }
+    }
+    .group_text{
+        width: 30%;
+        height: 94px;
+        .text_contact{
+            font-size: 14px;
+        }
+        .group_link{
+            svg{
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+    .group_footer{
+        height: 250px;
+    }
+
+}
+
+
+@media (min-width: 360px) and (max-width: 420px){
+    .group_footer{
+        // margin-left: 15px;
+        width: 100%;
+        height: 300px;
+        // margin: 0;
+    }
+    .group_logo{
+        img{
+            width: 101px;
+            height: 45px;
+        }
+        .foot_text{
+            font-size: 16px;
+            font-weight: 400;
+            -webkit-text-stroke: 0.2px black;
+        }
+    }
+    .text_contact{
+        font-size: 14px;
+    }
+    .group_text{
+        width: 118px;
+    }
+    .group_link{
+        margin: 5px 0 30px 0;
+        width: 118px;
+        height: 43px;
+        svg{
+            width: 23px;
+            height: 23px;
+        }
+    }
+    .container_footer{
+        margin: 0 30px 0 30px;
+    }
+    .foot_text{
+        margin-bottom: 20px;
+    }
+}

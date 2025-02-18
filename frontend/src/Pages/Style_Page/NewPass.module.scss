@@ -1,0 +1,355 @@
+@import '../../Style/GlobalStyle.scss';
+
+@mixin text_decor($color, $size, $weight) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $fontPoppins;
+}
+
+
+.main_logo {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('../Style_Page/img/Back_Log.png');
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+.form_login {
+    width: 55%;
+    height: 100%;
+    background: white;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    position: fixed;
+    left: 47%;
+    overflow: hidden;
+}
+
+.formLogIn {
+    width: 100%;
+    height: 44%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // right: 191px;
+}
+
+
+.cont_logo {
+    width: 18%;
+    height: 13%;
+    background-image: url('../../MainPage/Style_main/Logo.png');
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    right: 0;
+
+}
+
+.logo {
+    margin: 30px 7% 0 0;
+}
+
+.main_text {
+    margin-top: 15%;
+    margin-left: 15%;
+    display: flex;
+    justify-content: flex-start;
+    @include text_decor($red_color, 36px, 700)
+}
+.title{
+    margin-left: 15%;
+    color: #656773;
+    display: flex;
+    align-self: flex-start;
+}
+
+.inp_group {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    @include text_decor(black, 14px, 400);
+    margin: 60px 0 0px 0;
+
+    input {
+        padding-left: 12px;
+        color: #656773;
+        width: 70%;
+        height: 50px;
+        border-radius: 8px;
+        box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05), 0px 0px 1px 0px rgba(12, 26, 75, 0.24);
+        border: 0;
+        // margin-bottom: 50px;
+    }
+
+    input::placeholder {
+        padding-left: 20px;
+    }
+
+    input:focus {
+        box-shadow: 0px 3px 8px -1px rgba(120, 38, 32, 0.50), 0px 1px 15px 0px rgba(209, 241, 17, 0.50);
+        outline: none;
+    }
+
+    label {
+        width: 70%;
+        margin-bottom: 4px;
+        align-self: center;
+        text-align: start;
+        margin-top: 20px;
+    }
+
+    .eye_cont {
+        position: absolute;
+        top: 60px;
+        right: 140px;
+    }
+   
+}
+
+.confirm {
+    position: absolute;
+    bottom: 8px;
+    right: 140px;
+}
+
+svg:hover {
+    path {
+        fill: $red-color;
+    }
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+
+
+#password::placeholder {
+    display: flex;
+    padding-left: 35px;
+    background-image: url(./img/password.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 20px;
+    background-position: 0px;
+
+}
+
+#password_reset::placeholder {
+    display: flex;
+    padding-left: 35px;
+    background-image: url(./img/password.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 20px;
+    background-position: 0px;
+
+}
+
+
+.btn_log {
+    width: 70%;
+
+    input {
+        margin-top: 50px;
+        width: 100%;
+        height: 60px;
+        background-color: $red-color;
+        border-radius: 32px;
+        border: 0;
+        box-shadow: 0px 5px 14px 0px rgba(120, 38, 32, 0.25);
+        @include text_decor(white, 16px, 500)
+    }
+
+    input:hover {
+        background-color: $yellow-color;
+        color: $red-color;
+        box-shadow: 0px 5px 14px 0px rgba(120, 38, 32, 0.25);
+
+    }
+
+}
+
+.footer_log {
+    // margin-top: 15px;
+    // height: 150px;
+    width: 55%;
+    position: fixed;
+    bottom: 10px;
+    // display: flex;
+    // justify-content: flex-end;
+    // align-items: flex-end;
+}
+
+@media (min-width: 900px) and (max-width: 1125px) {
+    .inp_group {
+        input {
+            width: 70%;
+        }
+    }
+
+    .cont_logo {
+        width: 20%;
+        height: 13%;
+        right: 23px;
+        margin-right: 30px;
+    }
+    .inp_group{
+       .eye_cont{
+        right: 94px;
+        svg{
+            width: 15px;
+            height: 15px;
+        }
+    } 
+    }
+    
+    .confirm{   
+        right: 94px;
+    }
+
+}
+
+@media (min-width: 220px) and (max-width: 980px) {
+    .main_logo {
+        width: 100%;
+        height: 100%;
+        background-image: none;
+    }
+    .main_text{
+        margin: 0;
+        font-size: 36px;
+        align-self: center;
+        margin-left: 0;
+    }
+    .form_login {
+        width: 100%;
+        height: 100%;
+        background: white;
+        position: fixed;
+        overflow: hidden;
+        left: 0;
+    }
+    .title{
+        margin: 10px 0 95px 0;
+        font-size: 18px;
+        align-self: center;
+    }
+    .formLogIn{
+        height: 25%;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+        height: 100%;
+    }
+    .cont_logo {
+        width: 25%;
+        right: 0px;
+    }
+    .footer_log{
+        width: 100%;
+    }
+    .inp_group{
+        margin: 0;
+    }
+}
+
+// @media (min-width: 220px) and (max-width: 700px) {
+
+//     .cont_logo {
+//         width: 35%;
+//     }
+
+// }
+
+@media (min-width: 220px) and (max-width:425px) {
+
+    .cont_logo {
+        width: 34%;
+        height: 7%;
+    }
+
+    .form_login {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main_text{
+        font-size: 24px;
+        margin: 0;
+        // margin-top: 35%;
+        align-self: center;
+        margin-left: 0;
+    }
+    .title{
+        margin: 0;
+        margin-bottom: 50px;
+        font-size: 12px;
+        align-self: center;
+    }
+    .formLogIn{
+        height: 25%;
+    }
+
+    .inp_group{
+        margin: 0;
+        // margin-top: 20px;
+        input{
+            width: 75%;
+            height: 32px;
+        }
+        label{
+            width: 75%;
+            font-size: 14px;
+        }
+        .eye_cont {
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+
+            top:54px;
+            right: 15%;
+        }
+    }
+    .confirm{
+        right: 15%;
+        bottom: 2px;
+        svg{
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .reset_pass {
+        width: 75%;
+        font-size: 14px;
+        line-height: 0px;
+    }
+    .btn_log{
+        width: 75%;
+        input{
+            width: 100%;
+            height: 40px;
+        }
+    }
+    .footer_log{
+        bottom: 4px;
+        font-size: 12px;
+    }
+
+
+}

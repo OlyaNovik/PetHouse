@@ -1,0 +1,223 @@
+@import '../../Style/GlobalStyle.scss';
+
+@mixin text_decor($color, $size, $weight) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $fontPoppins;
+}
+
+.headText {
+    @include text_decor($red_color, 48px, 400);
+    margin-top: 80px;
+}
+
+
+
+.group_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.Card {
+    width: 20.1%;
+    height: 100%;
+    border: 1px solid $red-color;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    margin-bottom: 30px;
+    padding: 10px 10px 0 10px;
+}
+
+
+.card_foto {
+    width: 90%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.Card:hover {
+    box-shadow: 0px 3px 8px 0px #F1D111, 0px 4px 15px 0px #F1D111;
+}
+
+p {
+    margin: 0;
+}
+
+.card_text {
+    margin-top: 15px;
+    @include text_decor(black, 24px, 400);
+}
+
+.svg_arrow {
+    cursor: pointer;
+}
+
+.location {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    svg {
+        position: absolute;
+        top: 4px;
+        left: 17%;
+        color: lightgray;
+    }
+}
+
+.location_text {
+    font-size: 20px;
+    color: rgba(53, 52, 52, 0.52);
+}
+
+.svg_arrow {
+    cursor: pointer;
+}
+
+.svg_arrow:hover {
+    circle {
+        fill: #F1D111;
+    }
+
+    path {
+        stroke: $red-color;
+    }
+}
+
+
+@media (min-width: 1990px) {
+    .headText {
+        margin-top: 170px;
+    }
+}
+
+@media (min-width: 880px) and (max-width: 1240px) {
+    .Card {
+        width: 30%;
+        height: 35%;
+
+    }
+    .location{
+        svg{
+            width: 12px;
+            height: 12px;
+            left: 28%;
+        }
+    }
+    .location_text {
+        font-size: 17px;
+    }
+    .headText {
+        margin-top: -59px;
+    }
+
+}
+
+@media (min-width: 420px) and (max-width: 880px) {
+    .group_card {
+        flex-wrap: wrap;
+    }
+
+    .Card {
+        margin-top: 15px;
+        width: 35%;
+        height: 45%;
+    }
+
+    #back_pets {
+        height: 200px !important;
+    }
+
+}
+
+
+
+@media (min-width: 420px) and (max-width: 700px) {
+    .Card {
+        width: 35%;
+        height: 35%;
+
+    }
+
+}
+
+@media (min-width: 420px) and (max-width: 550px) {
+    .Card {
+        width: 85%;
+        height: 35%;
+
+    }
+    .location{
+        svg{
+            width: 12px;
+            height: 12px;
+            left: 28%;
+        }
+    }
+
+}
+
+@media (min-width: 360px) and (max-width: 420px) {
+    .headText {
+        margin: 0;
+        margin-bottom: 30px;
+        @include text_decor($red_color, 20px, bold);
+    }
+
+    .group_card {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+
+    }
+
+    .Card {
+        width: 45%;
+        height: 54%;
+        margin-bottom: 25px;
+        padding: 7px 7px 0 7px;
+    }
+
+    .card_foto {
+        width: 90%;
+        height: 153px;
+    }
+
+    .card_text {
+        @include text_decor(black, 13px, 400);
+
+    }
+
+    .location_text {
+        font-size: 10px;
+        // margin-bottom: 5px;
+    }
+
+    .location {
+        height: 20px;
+        margin-top: 10px;
+
+        svg {
+            position: relative;
+            width: 10px;
+            height: 19px;
+            top: -5px;
+            left: -5px;
+        }
+    }
+    .svg_arrow{
+        width: 39px;
+        height: 39px;
+    }
+    // svg{
+    //     width: 41px;
+    //     height: 42px;
+    // }
+    #back_pets {
+        height: 120px !important;
+    }
+
+}

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700&display=swap');
+
+
+@mixin text_decor($color,$size,$weight) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $fontPoppins;
+  }
+$box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+$border-radius: 20px;
+
+$red-color: rgba(120, 38, 32, 1);
+$brown-color: rgba(177, 131, 70, 1);
+$yellow-color: rgba(241, 209, 17, 1);
+$box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;;
+
+$fontPoppins: 'Poppins', sans-serif;
+
+#Turtle, #Samoid, #Large, #Adult, #Female,#Zhytomyr,#Maine_Coon,#Mouse{
+  border-radius: 0px 0px 25px 25px;
+}

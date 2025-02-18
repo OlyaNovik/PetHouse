@@ -1,0 +1,206 @@
+@import '../../Style/GlobalStyle.scss';
+
+@mixin text_decor($color, $size, $weight) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $fontPoppins;
+}
+
+
+.main_logo {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('../Style_Page/img/Back_Log.png');
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+.form_login {
+    width: 55%;
+    height: 100%;
+    background: white;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    position: fixed;
+    left: 45%;
+    overflow: hidden;
+}
+
+.cont_logo {
+    width: 18%;
+    height: 13%;
+    background-image: url('../../MainPage/Style_main/Logo.png');
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    right: 0;
+
+}
+
+.main_text {
+    // margin-top: 35%;
+    margin-left: 15%;
+    display: flex;
+    justify-content: flex-start;
+    @include text_decor($red_color, 36px, 700)
+}
+
+.title {
+    margin-left: 15%;
+    color: #656773;
+    display: flex;
+    align-self: flex-start;
+}
+
+.formLogIn {
+    width: 100%;
+    height: 14%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.btn_reset {
+    width: 70%;
+
+    input {
+        padding-left: 12px;
+        margin-top: 50px;
+        width: 100%;
+        height: 60px;
+        background-color: $red-color;
+        border-radius: 32px;
+        border: 0;
+        box-shadow: 0px 5px 14px 0px rgba(120, 38, 32, 0.25);
+        @include text_decor(white, 16px, 500)
+    }
+
+    input:hover {
+        background-color: $yellow-color;
+        color: $red-color;
+        box-shadow: 0px 5px 14px 0px rgba(120, 38, 32, 0.25);
+
+    }
+
+}
+
+.footer_log {
+    width: 55%;
+    position: fixed;
+    bottom: 40px;
+    color: #656773;
+}
+
+
+
+@media (min-width: 900px) and (max-width: 1125px) {
+    .btn_reset {
+        input {
+            height: 48px;
+        }
+    }
+    .cont_logo {
+        width: 20%;
+        height: 13%;
+        right: 23px;
+        // margin-right: 30px;
+    }
+
+}
+
+@media (min-width: 220px) and (max-width: 980px) {
+    .main_logo {
+        width: 100%;
+        height: 100%;
+        background-image: none;
+    }
+    .main_text{
+        margin: 0;
+        font-size: 28px;
+        align-self: center;
+        margin-left: 0;
+    }
+    .form_login {
+        width: 100%;
+        height: 100%;
+        background: white;
+        position: fixed;
+        overflow: hidden;
+        left: 0;
+    }
+    .title{
+        margin: 30px 0 10px 0;
+        font-size: 15px;
+        align-self: center;
+    }
+    .formLogIn{
+        height: 25%;
+    }
+    .btn_reset {
+        input {
+            height: 46px;
+            font-size: 14px;
+        }
+    }
+    .footer_log{
+        width: 100%;
+    }
+    .cont_logo {
+        width: 25%;
+        right: 0px;
+    }
+}
+
+@media (min-width: 220px) and (max-width:425px) {
+
+    .cont_logo {
+        width: 34%;
+        height: 7%;
+    }
+    .form_login{
+        display: flex;
+        flex-direction: column;
+    }
+    .main_text{
+        font-size: 24px;
+        margin: 0;
+        // margin-top: 35%;
+        align-self: center;
+        margin-left: 0;
+    }
+    .container{
+        height: 85%;
+    }
+    .title{
+        margin: 30px 0 10px 0;
+        font-size: 12px;
+        align-self: center;
+    }
+    .formLogIn{
+        height: 6%;
+    }
+    .inp_group{
+        margin: 0;
+        input{
+            width: 75%;
+            height: 32px;
+        }
+    }
+
+
+}

@@ -1,0 +1,244 @@
+@import '../../Style/GlobalStyle.scss';
+
+@mixin text_decor($color, $size, $weight) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    // font-family: $fontPoppins;
+}
+
+@mixin chooser_decor($width, $height, $back_color) {
+    font-family: $fontPoppins;
+    text-align: left;
+    padding: 7px 0 0 20px;
+    width: $width;
+    height: $height;
+    background-color: $back_color;
+    border-radius: 25px;
+    @include text_decor(white,24px,500)
+}
+
+
+.main{
+    height:480px;
+}
+.header{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./main_photo.png');
+}
+
+.cont_btn{
+width: 100%;
+display: flex;
+justify-content: flex-end;
+}
+.inp_btn {
+    width: 180px;
+    height: 60px;
+    margin-top: 45px;
+    margin-right: 20px;
+    border-radius: 10px;
+    outline: 0;
+    background-color: transparent;
+    @include text_decor($red-color, 28px, 500);
+    cursor: pointer;
+    border: 2px solid $red-color;
+  
+  }
+  
+  .inp_btn:hover {
+    color: white;
+    background-color: $red-color;
+  
+  }
+
+
+
+.cont_logo{
+    width: 16%;
+    // height: 13%;
+    background-image: url('../../MainPage/Style_main/Logo.png');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin: 2%; 
+}
+.button_exit{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    display: flex;
+}
+.filter{
+    width: 28%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin-top: 50px;
+   .label{
+        align-self: flex-start;
+        margin: 20px 0 7px 60px;
+        @include text_decor(black,32px,500)
+    }
+}
+.chooser{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    @include chooser_decor(85%,50px,$brown-color);
+    .arrow{
+        margin: 3px 10px 0 0;
+    }
+  
+}
+
+.list_pets{
+    @include chooser_decor(85%,50px,$brown-color);
+    border-radius: 0;
+    outline: 1px solid white ;
+    p{
+        cursor: pointer;
+    }   
+}
+.list_pets:hover{
+    background-color: white;
+    color: $brown-color;
+}
+.button_group{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+.choose_1{
+    width: 45%;
+    margin-right: 5px;
+    height: 50px;
+    background-color: $brown-color;
+    @include text_decor(white,24px,500);
+    border-radius: 25px 0px 0px 25px;
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.choose_2{
+    width: 45%;
+    height: 50px;
+    background-color: $brown-color;
+    @include text_decor(white,24px,500);
+    border-radius: 0px 25px 25px 0px;
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;
+    // padding-left: 10px;
+}
+.mobile_filter{
+    display: none;
+}
+.close_svg{
+    width:85%;
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.filter_main{
+    display: flex;
+    flex-direction: column;
+}
+
+#message_error{
+    @include text_decor($red-color,18px,500 )
+}
+@media (min-width: 1900px){
+    .header{
+        height: 40%;
+    }
+}
+
+@media (min-width: 300px) and (max-width:850px){
+    .header{
+        height: 20%;
+    }
+    .inp_btn{
+        width: 150px;
+        height: 50px;
+        margin-top: 3%;
+    }
+    .cont_logo{
+        width: 22%;
+        height: 7%;
+        margin: 11px 0px 0 15px; 
+
+    }
+    .main{
+        height: 394px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .filter{
+        // display: none;
+        width: 100%;
+    }
+    .mobile_filter{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .filter_btn{
+            width: 85%;
+            height: 40px;
+            border-radius: 25px;
+            background-color: $red-color;
+            border: none;
+            margin-top: 30px;
+            box-shadow: 0px 4px 4px 0px rgba(177, 131, 70, 0.25);
+            @include text_decor(white,18px,500)
+        }
+    }
+    .mobile_filter:hover{
+        .filter_btn{
+            background-color: $brown-color;
+        }
+        
+    }
+
+    .filter{
+        display: none;
+    }
+
+}
+
+@media (min-width: 300px) and (max-width:590px){
+    .header{
+        display: flex;
+        justify-content: flex-end;
+        height: 13%;
+    }
+    .inp_btn{
+        width: 80px;
+        height: 25px;
+        margin-left: 10px;
+        border-radius: 5px;
+        @include text_decor($red-color,16px,400 )
+    }
+    .cont_btn{
+        justify-content: flex-start;
+    }
+    .cont_logo{
+        width: 26%;
+        height: 5%;
+        margin: 11px 0px 0 15px; 
+
+    }
+
+}

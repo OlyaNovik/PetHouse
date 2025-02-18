@@ -1,0 +1,339 @@
+@import '../../Style/GlobalStyle.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+@mixin text_decor($color, $size, $weight) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $fontPoppins;
+}
+
+.main {
+  height: 800px;
+}
+
+.logo {
+  width: 275px;
+  height: 125px;
+  // margin-right: 123px;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+
+}
+
+.container_head {
+  margin: 0 20px 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inp_btn {
+  width: 180px;
+  height: 60px;
+  margin: 15px;
+  border-radius: 10px;
+  outline: 0;
+  background-color: transparent;
+  @include text_decor($red-color, 28px, 500);
+  cursor: pointer;
+  border: 2px solid $red-color;
+
+}
+
+.inp_btn:hover {
+  // border: 2px solid white;
+  color: white;
+  background-color: $red-color;
+
+}
+
+.group_btn {
+  left: 286px;
+  a{
+    text-decoration: none;
+  }
+}
+
+.text1 {
+  @include text_decor(black, 36px, 400);
+  margin: 0;
+  margin-top: 15px;
+
+}
+.group_search{
+  position: relative;
+}
+
+
+.windowSearch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  // margin-left: 320px;
+  top: -150px;
+  width: 800px;
+  height: 360px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: $box-shadow;
+
+}
+
+.inp_search {
+  margin-top: 25px;
+  width: 400px;
+  height: 60px;
+  border-radius: 60px;
+  border: 1px solid $brown-color;
+  @include text_decor(black, 20px, 400);
+  padding-left: 27px;
+}
+
+.inp_search:focus {
+  outline: none;
+  box-shadow: 0px 3px 8px 0px rgba(120, 38, 32, 0.50), 0px 4px 15px 0px rgba(120, 38, 32, 0.50);
+
+}
+
+.svg {
+  position: relative;
+  top: 10px;
+}
+
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: $red-color;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 545px;
+  z-index: 0;
+
+}
+
+
+
+.container_search {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.back {
+  width: 100%;
+  height: 593px;
+  background-image: url('../Style_main/main_photo1990.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 1990px) {
+  .back {
+    width: 100%;
+    height: 670px;
+    background-image: url('../Style_main/main_photo1990.png');
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1990px) {
+  .back {
+    width: 100%;
+    height: 590px;
+    background-image: url('../Style_main/main_photo1990.png');
+    background-repeat: no-repeat;
+  }
+}
+@media (min-width: 880px) and (max-width: 1140px) {
+  .back {
+    width: 100%;
+    height: 55%;
+    background-image: url('../Style_main/main_photo1990.png');
+    background-repeat: no-repeat;
+  }
+  .windowSearch{
+    top: -89px;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 880px) {
+  .back {
+    width: 100%;
+    height: 590px;
+    background-image: url('../Style_main/Header.png');
+    background-repeat: no-repeat;
+  }
+  .svg_arrow {
+    width: 80px;
+    height: 80px;
+  }
+  .windowSearch {
+    width: 95%;
+    // height: 90%;
+  }
+  .group_btn{
+    width: 30%;
+  }
+  .group_search{
+    width: 400px;
+    align-self: center;
+  }
+  .circle{
+    top: 30px;
+    left: 333px;
+  }
+  .inp_search{
+    width: 94%;
+  }
+}
+@media (min-width: 420px) and (max-width: 700px) {
+  .back {
+    width: 100%;
+    height: 590px;
+    background-image: url('../Style_main/Header.png');
+    background-repeat: no-repeat;
+  }
+  .logo{
+    width: 200px;
+    height: 100px;
+  }
+  .svg_arrow {
+    width: 70px;
+    height: 70px;
+  }
+  .inp_btn{
+    width: 80%;
+    height: 35%;
+    font-size: 22px;
+  }
+  .inp_search{
+    width: 94%;
+  }
+}
+.pets_choose{
+  width: 100%;
+  display:flex ;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 20px;
+  .not_selected {
+    svg{
+      z-index: 2;
+      cursor: pointer;
+      
+    }
+    svg:hover{
+      g{
+        fill:$red-color; 
+      }
+    }
+  }
+  .selected {
+    svg{
+      z-index: 2;
+      cursor: pointer;
+      g {
+        fill:$red-color;
+      }
+    }
+    svg:hover{
+      g{
+        fill:black; 
+      }
+    }
+  }
+
+ 
+}
+
+// .check_pets{
+//   position: absolute;
+//   top:9px;
+//   z-index: -1;
+//   left:-11px;
+//   width: 90px;
+//   height: 100px;
+// }
+
+@media (min-width: 360px) and (max-width: 420px) {
+  .back {
+    width: 100%;
+    height: 360px;
+    background-image: url('../Style_main/mobile_back.png');
+    background-repeat: no-repeat;
+  }
+
+  .logo {
+    width: 112px;
+    height: 51px;
+  }
+
+  .inp_btn {
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    margin: 10px;
+    @include text_decor($red-color, 15px, 400);
+
+  }
+  .pets_choose{
+    svg{
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .group_btn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .windowSearch {
+    margin: 0;
+    position: relative;
+    top: -80px;
+    width: 355px;
+    height: 185px;
+  }
+
+  .inp_search {
+    margin-top: 15px;
+    width: 177px;
+    height: 31px;
+    @include text_decor(black, 10px, lighter);
+  }
+
+  .text1 {
+    @include text_decor(black, 20px, bold);
+  }
+
+  .circle {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 21px;
+    left: 241px;
+
+    svg {
+      width: 13px;
+      height: 13px;
+      top: -1px;
+    }
+  }
+
+  .main {
+    height: 500px;
+  }
+
+}
